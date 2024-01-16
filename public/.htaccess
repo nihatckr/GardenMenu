@@ -1,0 +1,17 @@
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the "ea-php73" package as the default "PHP" programing language
+<IfModule mod_rewrite.c>
+    AddHandler applicaction/x-httpd-ad-php73 .php .php7 .phtml
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-l
+    RewriteRule . /index.html [L]
+
+</IfModule>
